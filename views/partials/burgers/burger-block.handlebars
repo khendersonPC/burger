@@ -1,0 +1,9 @@
+<li>
+	{{name}}
+
+	<button class="change-available" data-id="{{id}}" data-newavailable="{{available}}">
+		{{#if available}}Consume{{else}}Make Available{{/if}}
+	</button>
+
+	<button class="delete-burger" data-id="{{this.id}}">DELETE</button>
+</li>

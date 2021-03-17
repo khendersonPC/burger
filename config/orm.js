@@ -37,7 +37,7 @@ const objToSql = (ob) => {
 
 // Object for all our SQL statement functions.
 const orm = {
-  selectAll(tableInput, cb) {
+  all(tableInput, cb) {
     const queryString = `SELECT * FROM ${tableInput};`;
     connection.query(queryString, (err, result) => {
       if (err) {
@@ -84,38 +84,6 @@ const orm = {
       cb(result);
     });
   },
-
-  updateOne(table, objColVal, condition, cb) {
-    let queryString = `UPDATE ${table}`;
-
-    queryString += ' SET ';
-    queryString += objToSql(objColVal);
-    queryString += ' WHERE ';
-    queryString += condition;
-
-    console.log(queryString);
-    connection.query(queryString, (err, result) => {
-      if (err) {
-        throw err;
-      }
-
-      cb(result);
-    });
-  },
-
-  insertOne(table, whereToInsert, whatToInsert, cb){
-      let queryString= `INSERT INTO ${table} (${whereToInsert})
-      VALUES (${whatToInsert});`;
-      console.log(queryString);
-      connection.query(queryString, (err, result) => {
-        if (err) {
-          throw err;
-        }
-  
-        cb(result);
-      });
-  },
-  
   delete(table, condition, cb) {
     let queryString = `DELETE FROM ${table}`;
     queryString += ' WHERE ';
@@ -130,7 +98,6 @@ const orm = {
     });
   },
 };
-
 
 // Export the orm object for the model (cat.js).
 module.exports = orm;

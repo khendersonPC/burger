@@ -1,6 +1,6 @@
-INSERT INTO burgers (burger_name) VALUES ('Standard Burger');
-INSERT INTO burgers (burger_name) VALUES ('Double Burger');
-INSERT INTO burgers (burger_name, devoured) VALUES ('Veggie Burger', true);
-INSERT INTO burgers (burger_name, devoured) VALUES ('Lab-Created Burger', true);
-INSERT INTO burgers (burger_name, devoured) VALUES ('Bacon Burger', true);
-INSERT INTO burgers (burger_name) VALUES ('Mushroom Burger');
+INSERT INTO burgers (name) VALUES ('Mushroom');
+INSERT INTO burgers (name) VALUES ('Bacon');
+INSERT INTO burgers (name, available) VALUES ('Veggie', true);
+INSERT INTO burgers (name, available) VALUES ('Southwest', true);
+INSERT INTO burgers (name, available) VALUES ('Pastrami', true);
+INSERT INTO burgers (name) VALUES ('Double');

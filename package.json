@@ -1,24 +1,19 @@
 {
-  "name": "burger",
+  "name": "mvc_design",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/khendersonPC/burger.git"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/khendersonPC/burger/issues"
-  },
-  "homepage": "https://github.com/khendersonPC/burger#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-handlebars": "^5.2.1",
-    "mysql": "^2.18.1"
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
   }
 }

@@ -2,7 +2,7 @@
 const orm = require('../config/orm.js');
 
 const burger = {
-  selectAll(cb) {
+  all(cb) {
     orm.all('burgers', (res) => cb(res));
   },
   // The variables cols and vals are arrays.
@@ -12,16 +12,10 @@ const burger = {
   update(objColVals, condition, cb) {
     orm.update('burgers', objColVals, condition, (res) => cb(res));
   },
-  updateOne(objColVal, condition, cb) {
-    orm.update('burgers', objColVal, condition, (res) => cb(res));
-  },
-  insertOne(whereToInsert, whatToInsert, cb) {
-    orm.update('burgers', whereToInsert, whatToInsert, (res) => cb(res));
-  },
   delete(condition, cb) {
     orm.delete('burgers', condition, (res) => cb(res));
   },
 };
 
-// Export the database functions for the controller (catsController.js).
+// Export the database functions for the controller (burgersController.js).
 module.exports = burger;
